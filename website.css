@@ -1,0 +1,364 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between the image and text */
+}
+
+.logo-image {
+  width: 70px; /* Adjust size */
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%; /* Makes the image circular, optional */
+}
+
+header {
+    background-color: #f56e6e;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+  display: flex;
+  gap: 20px; /* Space between the navigation links */
+  flex-wrap: nowrap; /* Prevent links from wrapping */
+  margin-right: 2%;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem; /* Adjust the font size */
+  white-space: nowrap; /* Prevent wrapping for longer text */
+  transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #000000;
+}
+
+.hero {
+    background: url('popcorn.jpeg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f56e6e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #e65b50;
+}
+
+.features {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.features .grid {
+    display: grid;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+  position: relative; /* Ensures proper positioning of child elements */
+  padding: 20px 70px; /* Leave space for images */
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 20px auto;
+  max-width: 80%; /* Increase the maximum width of the card */
+  width: 90%
+}
+
+/* Styling for the images inside the card */
+.card-image {
+  position: absolute;
+  top: 50%;
+  width: 80px; /* Adjust width as needed */
+  height: 80px; /* Adjust height as needed */
+  transform: translateY(-50%); /* Center vertically */
+}
+
+/* Left image */
+.card-image.left {
+  left: 3%; /* Adjust padding from the left */
+}
+
+/* Right image */
+.card-image.right {
+  right: 3%; /* Adjust padding from the right */
+}
+
+.sustainable-card .card-image {
+  width: 80px; /* Unique width for Sustainable card */
+  height: 60px; /* Unique height for Sustainable card */
+}
+
+.card .card-content {
+  padding: 10px; /* Additional spacing between text and images */
+}
+
+.features .card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.features .card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.features2 {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.features2 .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: -70%; /* Horizontal space */
+}
+
+.features2 h5 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.features2 .card {
+  padding: 20px;
+  max-width: 60%;
+  max-height: 80%;
+  width: 100%; /* Ensure cards don't exceed the container's width */
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0 auto;
+}
+
+.features2 .card h6 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.features2 .card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.cheese-outline {
+  width: 100px;
+  height: 100px;
+  background: url('cheese.png') no-repeat center center;
+  background-size: contain;
+  -webkit-mask: url('cheese.png') center center no-repeat;
+  -webkit-mask-size: contain;
+  mask: url('cheese.png') center center no-repeat;
+  mask-size: contain;
+  background-color: white; /* Outline color */
+}
+
+.cheese-container{
+  display: flex; /* Aligns items in a row */
+  align-items: center; /* Vertically centers the title with the image */
+  gap: 10%; /* Adds some space between the image and the title */
+}
+
+.cheese-container h6 {
+  margin: 0; /* Remove any default margins */
+  position: relative; /* Allows adjustment */
+  top: -0.5%; /* Moves the title upward */
+  text-align: center; /* Aligns the text properly */
+}
+
+.bacon-outline {
+  width: 100px;
+  height: 100px;
+  background: url('bacon.png') no-repeat center center;
+  background-size: contain;
+  -webkit-mask: url('bacon.png') center center no-repeat;
+  -webkit-mask-size: contain;
+  mask: url('bacon.png') center center no-repeat;
+  mask-size: contain;
+  background-color: white; /* Outline color */
+}
+
+.bacon-container{
+  display: flex; /* Aligns items in a row */
+  align-items: center; /* Vertically centers the title with the image */
+  gap: 10%; /* Adds some space between the image and the title */
+}
+
+.bacon-container h6 {
+  margin: 0; /* Remove any default margins */
+  position: relative; /* Allows adjustment */
+  top: -0.5%; /* Moves the title upward */
+  text-align: center; /* Aligns the text properly */
+}
+
+.paprika-outline {
+  width: 100px;
+  height: 100px;
+  background: url('paprika.png') no-repeat center center;
+  background-size: contain;
+  -webkit-mask: url('paprika.png') center center no-repeat;
+  -webkit-mask-size: contain;
+  mask: url('paprika.png') center center no-repeat;
+  mask-size: contain;
+  background-color: white; /* Outline color */
+}
+
+.paprika-container{
+  display: flex; /* Aligns items in a row */
+  align-items: center; /* Vertically centers the title with the image */
+  gap: 10%; /* Adds some space between the image and the title */
+}
+
+.paprika-container h6 {
+  margin: 0; /* Remove any default margins */
+  position: relative; /* Allows adjustment */
+  top: 10%; /* Moves the title upward */
+  text-align: center; /* Aligns the text properly */
+}
+
+.bucket {
+  display: flex; /* Horizontal layout for text and image */
+  align-items: flex-start; /* Align content vertically */
+  justify-content: space-between; /* Ensure proper spacing */
+  gap: 10px; /* Space between text and image */
+  padding: 20px;
+}
+
+.bucket-content {
+  display: flex; /* Use flexbox for the content */
+  flex-direction: column; /* Stack the title and text vertically */
+  max-width: 50%; /* Ensure text content doesn't stretch too wide */
+  margin-left: 8%;
+  width: 100%;
+}
+
+.bucket-container {
+  flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.bucket-image {
+  width: 1600px; /* Large size for the image */
+  height: 400px;
+  object-fit: cover; /* Ensure the image fills its area properly */
+}
+
+.bucket h5 {
+  font-size: 2rem;
+  margin: 0 0 10; /* Add space below the title */
+  text-align: center;
+}
+
+.bucket p {
+  font-size: 1rem;
+  margin: 5px 0; /* Add spacing between paragraphs */
+  text-align: center;
+}
+
+.squad {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.squad .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.squad h5 {
+  font-size: 2rem;
+  margin-bottom: 100px;
+}
+
+.squad .card {
+  width: 420px; /* Fixed card width */
+  height: 250px; /* Fixed card height */
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+}
+
+.squad .card h6 {
+  font-size: 1.2rem;
+  margin: 0;
+  flex: 1; /* Allow name text to take available space */
+  text-align: center; /* Align name to the left */
+}
+
+.squad .card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 20px 0 0 20px
+}
+
+.person-image {
+  width: 150px; /* Adjust size */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* Makes the image circular, optional */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
