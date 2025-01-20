@@ -159,36 +159,51 @@ nav a:hover {
 }
 
 .features2 {
-  padding: 50px 20px;
+  padding: 20px;
   text-align: center;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .features2 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  column-gap: -70%; /* Horizontal space */
+  gap: 10px;
+  max-width: 1200px; /* Set a max-width for larger screens */
+  margin: 0 auto; /* Center the grid */
+  padding: 20px; /* Consistent padding around the grid */
+  box-sizing: border-box;
 }
 
 .features2 h5 {
   font-size: 2rem;
   margin-bottom: 30px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .features2 .card {
+  background: #fff;
   padding: 20px;
-  max-width: 60%;
-  max-height: 80%;
-  width: 100%; /* Ensure cards don't exceed the container's width */
   border: 1px solid #eaeaea;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 80%; /* Make all cards the same height */
+  width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word; /* Ensure long words break */
+  min-width: 0; /* Prevents flex items from overflowing */
 }
 
 .features2 .card h6 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .features2 .card p {
@@ -277,23 +292,20 @@ nav a:hover {
   justify-content: space-between; /* Ensure proper spacing */
   gap: 10px; /* Space between text and image */
   padding: 20px;
+  height: 40%;
 }
 
 .bucket-content {
   display: flex; /* Use flexbox for the content */
   flex-direction: column; /* Stack the title and text vertically */
-  max-width: 50%; /* Ensure text content doesn't stretch too wide */
-  margin-left: 8%;
-  width: 100%;
-}
-
-.bucket-container {
-  flex-shrink: 0; /* Prevent the image from shrinking */
+  max-width: 60%; /* Ensure text content doesn't stretch too wide */
+  width: 100%; /* Make it adapt to available space */
 }
 
 .bucket-image {
-  width: 1600px; /* Large size for the image */
-  height: 400px;
+  width: 100%; /* Image width adjusts to its container */
+  height: 100%;
+  max-width: 1400px; /* Set a maximum width for the image */
   object-fit: cover; /* Ensure the image fills its area properly */
 }
 
@@ -310,30 +322,34 @@ nav a:hover {
 }
 
 .squad {
-  padding: 50px 20px;
+  padding: 20px;
   text-align: center;
+  box-sizing: border-box;
+  width: 100%
 }
 
 .squad .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
+  width: 100%;
 }
 
 .squad h5 {
   font-size: 2rem;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
 }
 
 .squad .card {
-  width: 420px; /* Fixed card width */
-  height: 250px; /* Fixed card height */
-  padding: 20px;
+  width: 90%; /* Fixed card width */
+  height: 80%; /* Fixed card height */
+  padding: 25px;
   border: 1px solid #eaeaea;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   display: flex;
+  margin: 0 auto;
 }
 
 .squad .card h6 {
@@ -344,14 +360,14 @@ nav a:hover {
 }
 
 .squad .card p {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   color: #555;
-  margin: 20px 0 0 20px
+  margin: 10px 0 0 10px;
 }
 
 .person-image {
-  width: 150px; /* Adjust size */
-  height: 150px;
+  width: 120px; /* Adjust size */
+  height: 120px;
   object-fit: cover;
   border-radius: 50%; /* Makes the image circular, optional */
 }
