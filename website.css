@@ -207,22 +207,49 @@ nav a:hover {
   color: #555;
 }
 
-/* Media query for mobile screens */
 @media screen and (max-width: 480px) {
-  .card {
-      padding: 20px 100px; /* Even more side padding on mobile */
-      max-width: 95%;
-      width: 95%;
+  .features .grid {
+    padding: 0 10px; /* Add some padding to the grid container */
+  }
+  
+  .features .card {
+    padding: 20px 40px; /* Reduced horizontal padding */
+    max-width: 75%; /* Full width on mobile */
+    width: 75%;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    margin: 10px 0; /* Reduced vertical margin */
   }
   
   .card-image {
-      width: 60px;
-      height: 60px;
+    width: 40px; /* Even smaller images on mobile */
+    height: 40px;
+  }
+  
+  .card-image.left {
+    left: 10px;
+  }
+  
+  .card-image.right {
+    right: 10px;
   }
   
   .sustainable-card .card-image {
-      width: 60px;
-      height: 45px;
+    width: 40px;
+    height: 30px;
+  }
+  
+  .features .card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  .features .card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 0 5px; /* Add some padding to prevent text touching images */
   }
 }
 
@@ -354,6 +381,27 @@ nav a:hover {
   text-align: center; /* Aligns the text properly */
 }
 
+@media screen and (max-width: 480px) {
+  .features2 .grid {
+    padding: 0 10px; /* Add some padding to the grid container */
+  }
+  
+  .features2 .card {
+    padding: 20px 20px; /* Reduced horizontal padding */
+    max-width: 100%; /* Full width on mobile */
+    width: 100%;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    margin: 10px 0; /* Reduced vertical margin */
+  }
+
+  .features2 .card p {
+    margin-bottom: 25px; /* Added margin to the paragraph */
+  }
+}
+
 .bucket {
   display: flex; /* Horizontal layout for text and image */
   align-items: flex-start; /* Align content vertically */
@@ -438,6 +486,12 @@ nav a:hover {
   height: 120px;
   object-fit: cover;
   border-radius: 50%; /* Makes the image circular, optional */
+}
+
+@media screen and (max-width: 480px) {
+  .squad .grid {
+    padding: 10px; /* Add some padding to the grid container */
+  }
 }
 
 footer {
